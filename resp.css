@@ -934,6 +934,10 @@
     #navigasi{
         font-size: 12px;
         gap: 0;
+        .container{
+            gap: 0vw;
+            margin-left: 10px;
+        }
         ul{
             gap: 10px;
         }
