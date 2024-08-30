@@ -20,7 +20,7 @@ html{
 
 body{
     touch-action: pan-y;
-    
+
 }
 
 a{
@@ -112,12 +112,12 @@ a{
     z-index: 99999999999999;
     font-family: 'metropolis reg';
     position: fixed;
-    translate: 0 -7px;
+    top: 0;
     .top{
         display: flex;
         align-items: center;
+        gap: 15vw;
         .fa-x{
-            margin-left: 25vw;
             font-size: 20px;
             
         }
@@ -192,7 +192,7 @@ button{
 .content1{
     margin-top: 5%;
     height: max-content;
-    overflow-y: hidden;
+    overflow-x: hidden;
     z-index: 999999;
     border-bottom-left-radius: 25px;
     border-bottom-right-radius: 25px;
