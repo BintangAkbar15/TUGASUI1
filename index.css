@@ -24,6 +24,10 @@ body{
     position: relative;
 }
 
+input[type*="text"]:focus{
+    outline: none;
+}
+
 a{
     color: rgb(77, 199, 247);
 }
