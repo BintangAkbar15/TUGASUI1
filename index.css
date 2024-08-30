@@ -1,0 +1,1432 @@
+@font-face {
+    font-family: 'metropolis';
+    src: url(font/Metropolis-Bold.otf)format('opentype');
+}
+@font-face {
+    font-family: 'metropolis thin';
+    src: url(font/Metropolis-Thin.otf)format('opentype');
+}
+@font-face {
+    font-family: 'metropolis reg';
+    src: url(font/Metropolis-Regular.otf)format('opentype');
+}
+
+html{
+    background: rgb(1, 13, 26);
+    z-index: -1;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+body{
+    touch-action: pan-y;
+    
+}
+
+a{
+    color: rgb(77, 199, 247);
+}
+
+*{
+    margin-left: 0;
+    margin-right: 0;
+    /* overflow-x: hidden; */
+    /* box-sizing: border-box; */
+}
+
+/* navigasi */
+#navigasi{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    font-family: 'Metropolis Thin';
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    background: white;
+    z-index: 99999999999;
+}
+
+#navigasi .container{
+    display: flex;
+    align-items: center;
+    gap: 2vw;
+    margin-left: 50px;
+}
+
+#navigasi .navigasi{
+    gap: 40px;
+    display: flex;
+}
+
+#navigasi .fa-bars{
+    margin-left: 1vw;
+    font-size: 20px;
+    display: none;
+}
+
+.mainnav{
+    padding: 0;
+    gap: 30px;
+}
+
+#navigasi ul{
+    list-style: none;
+    display: flex;
+    gap: 2vw;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+}
+
+#navigasi li{
+    display: flex;
+    gap: 2%;
+    align-items: center;
+}
+
+#navigasi .sign{
+    text-decoration: underline;
+    font-family: 'Metropolis Reg';
+}
+
+#navigasi .subnav{
+    img{
+        width: 45%;
+        height: 20px;
+        border-radius: 50%;
+    }
+}
+
+#side-navigasi{
+    background-color: white;
+    width: 55vw;
+    height: 100%;
+    display: none;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+    position: absolute;
+    z-index: 99999999999999;
+    font-family: 'metropolis reg';
+    position: fixed;
+    translate: 0 -7px;
+    .top{
+        display: flex;
+        align-items: center;
+        .fa-x{
+            margin-left: 25vw;
+            font-size: 20px;
+            
+        }
+    }
+    .top , .navigasi{
+        margin-left: 20px;
+    }
+    ul{
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 5vh;
+        li:nth-child(1),li:nth-child(2),li:nth-child(3),li:nth-child(4),li:nth-child(5){
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            font-size: 18px;
+            height: 40px;
+            border-bottom: 2px solid black;
+            width: 50vw;
+            svg:nth-child(1){
+                position: absolute;
+                margin-left: 45vw;
+            }
+        }
+        li:nth-child(6){
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            font-size: 18px;
+            height: 40px;
+            svg:nth-child(1){
+                position: absolute;
+                margin-left: 45vw;
+            }
+        }
+    }
+    .bt{
+        border-top: 1px solid black;
+        margin-top: 9vh;
+        width: 50vw;
+        button{
+            width: 100%;    
+            background: linear-gradient(120deg,blue 25% ,rgb(2, 2, 137));
+            color: white;
+            margin-top: 5vh;
+        }
+    }
+}
+
+button{
+    background-color: white;
+    border: blue 2px solid;
+    border-radius: 50px;
+    height: 40px;
+}
+
+.request{
+    color: blue;
+    font-weight: bold;
+}
+
+.trial{
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+}
+
+
+/* konten 1 */
+
+.content1{
+    margin-top: 5%;
+    height: max-content;
+    overflow-y: hidden;
+    z-index: 999999;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+    background-color: white;
+    height: max-content;
+    .hero2,.badge2{
+        display: none;
+    }
+}
+
+.content1 .hero{
+    width: 100%;
+    translate: 35vw;
+    z-index: 1;
+    position: absolute;
+}
+
+.content1 .shadow{
+    height: 50%;
+    width: 25%;
+    translate: 130vh 9vh;
+    border-radius: 20rem;
+    z-index: -1;
+    position: absolute;
+    box-shadow: -70px 0 600px 0 rgba(238, 130, 238, 0.416); 
+}
+
+.content1 .badge{
+    width: 18%;
+    translate: 60vw 40vh;
+    object-fit: fill;
+    object-position: 10px;
+    z-index: 3;
+    position: absolute;
+}
+
+.main1 h5{
+    font-family: 'metropolis thin';
+    font-size: 15.5px;
+    margin: 0vh 2vh 2vh 0;
+}
+
+.main1 p{
+    font-size: 12px;
+    font-family: 'metropolis reg';
+    line-height: 17px;
+    font-weight: bold;
+    
+}
+
+.main1 h1{
+    font-family: 'metropolis';
+    font-size: 75px;
+    margin: 0;
+    background: linear-gradient(141deg, black 2%,rgb(2, 2, 137) 26% , blue , rgb(166, 0, 255)80%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 70px;
+    width: 56vw;
+}
+
+.main1{
+    margin: 5vh 14vh 14vh 14vh;
+}
+
+.buttonc1{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.start{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(120deg,blue 25% ,rgb(2, 2, 137));
+    width: max-content;
+    height: 45px;
+    width: 12vw;
+    color: white;
+    font-weight: bold;
+}
+
+.demo{
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 12vw;
+    height: 45px;
+}
+
+.main1 .demo div{
+    width: 35px;
+    height: 35px;
+    border-radius: 20px;
+    background: linear-gradient(120deg,rgb(2, 2, 137) 30% , blue);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    translate: 10px ;
+}
+
+.fa-chevron-right{
+    color: white;
+    font-size: 10px;
+}
+
+.main1 .access{
+    font-family: 'metropolis reg';
+    font-size: 14px;
+    font-weight: 500;
+    ul{
+        list-style: none;
+        margin-top: 30px;
+        padding: 0;
+    }
+    li{
+        margin-top: 15px;
+    }
+    .fa-circle-check{
+        font-size: 12px;
+        margin-right: 5px;
+    }
+}
+
+.content2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 95%;
+    height: max-content;
+    z-index: -1;
+    margin: 50px 50px 50px 20px;
+}
+
+.content2 h1{
+    font-size: 25px;
+    text-align: center;
+    font-family: 'metropolis';
+    z-index: 999999;
+    background: linear-gradient(70deg, white 45%,blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin: 0;
+}
+
+.content2 .row1{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: 10%;
+        margin-left: 60px;
+    }
+}
+
+.content2 .row2{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: 10%;
+        margin-left: 60px;
+    }
+}
+
+.content2 .row3{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: 10%;
+        margin-left: 60px;
+    }
+}
+
+.content2 .row4{
+    margin-top: 5vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: 10%;
+        margin-left: 60px;
+    }
+}
+
+.content3{
+    width: 100%;
+    background: white;
+    z-index: -1;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+
+.content3 .mainsection .wrapper{
+    width: 100vw;
+
+}
+
+.content3 .topsection{
+    height: 70px;
+    background-color: #f2f7ff;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        margin-left: 60px;
+    }
+    label{
+        font-family: 'metropolis reg';
+        font-size: 10px;
+        display: flex;
+    }
+}
+
+.content3 .mainsection{
+    img{
+        position: absolute;
+        translate: 0 -50px;
+    }
+}
+
+.content3 .mainsection .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-top: 60px;
+    h1{
+        line-height: 50px;
+        margin: 0;
+        font-family: 'metropolis';
+        font-size: 46px;
+    }
+    .text1{
+        background: linear-gradient(70deg, rgb(8, 8, 121),blue);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    p{
+        font-family: 'metropolis reg';
+        font-size: 13.5px;
+        margin-top: 14px;
+        line-height: 2vw;
+    }
+}
+
+.content3 .mainsection .square-container{
+    display: flex;
+    flex-flow: wrap row;
+    margin-left: 8%;
+    gap: 2vh;
+    margin-top: 5vh;
+}
+
+.content3 .mainsection .square-container .square{
+    width: 265px;
+    height: 110px;
+    background-color: #f2f7ff;
+    display: flex;
+    flex-direction: column;
+    margin-top: 0vh;
+    border-radius: 10px;
+    
+    h5{
+        margin: 0;
+        font-family: 'metropolis';
+        font-size: 15px;
+        margin-left: 4vw;
+        margin-top: 1vw;
+    }
+}
+
+.square .title{
+    display: flex;
+    img{
+        width: 2%;
+        translate: 1.5vw .5vw;
+    }
+}
+
+.square .in-square{
+    p{
+        font-family: 'metropolis reg';
+        font-weight: 600;
+        font-size: 12px;
+        margin-top: 2vw;
+        margin-left: 10px;
+        margin-right: 10px;
+        line-height: 15px;
+    }
+}
+
+.content4{
+    background: linear-gradient(to top ,white, #f2f7ff 500px, #f2f7ff);
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center; 
+}
+
+.content4 .container1{
+    display: flex;
+    padding: 10px 10px 10px 10px;
+    margin: 15px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    width: 96%;
+    height: max-content;
+    background: linear-gradient(to top, #f2f7ff, white);
+    align-items: center;
+    justify-content: center;
+    gap: 8vh;
+    img{
+        width: 35.3%;
+    }
+    h1{
+        font-family: 'metropolis';
+        font-size: 44px;
+        margin: 0;
+        line-height: 60px;
+        background: linear-gradient(141deg, black 2%,rgb(2, 2, 137) 26% , blue);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    p{
+        line-height: 30px;
+        letter-spacing: .2px;
+        font-weight: 600;
+        font-family: 'metropolis thin';
+        font-size: 15px;
+    }
+    button{
+        width: 15vw;
+        gap: 3vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'metropolis';
+        font-size: 1vw;
+        height: 50px;
+        background: linear-gradient(120deg, blue 30% , rgb(2, 2, 137));
+        color: white;
+    }
+    button  div{
+        width: 3vw;
+        height: 3vw;
+        border-radius: 20px;
+        display: flex;      
+        align-items: center;
+        justify-content: center;
+        background: white;
+        i{
+            color: black;
+            font-weight: 600;
+        }
+    }
+}
+
+.content4 .container2{
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    padding: 10px 10px 10px 10px;
+    margin: 15px;
+    border-radius: 25px;
+    width: 90%;
+    height: 25vw;
+    background: rgb(1, 6, 28);
+    align-items: center;
+    justify-content: center;
+    gap: 1.5vh;
+    overflow: hidden;
+    color: white;
+    .val{
+        z-index: 1;
+    }
+    h1{
+        font-family: 'metropolis';
+        font-size: 40px;
+        margin: 0;
+        line-height: 60px;
+        text-align: center;
+    }
+    p{
+        line-height: 30px;
+        letter-spacing: .2px;
+        font-weight: 600;
+        font-family: 'metropolis thin';
+        font-size: 15px;
+        text-align: center;
+        margin-top: 0;
+    }
+    .input{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+        width: 40vw;
+        height: 45px;
+        border-radius: 20px;
+        margin-top: 30px;
+        gap: 2vw;
+    }
+    input[type="text"]{
+        border: none;
+        outline: none;
+        width: 25vw;
+        height: 40px;
+        border-radius: 20px;
+        padding-left: 10px;
+        font-family: 'metropolis reg';
+        font-size: 15px;
+    }
+    button{
+        width: 11.5vw;
+        height: 40px;
+        background-color: blue;
+        color: white;
+        text-align: center;
+    }
+}
+
+.bluryimg{
+    /* translate: -66vh; */
+    img{
+        height: 65vh;
+    }
+}
+.bluryimg2{
+    /* translate: 66vh; */
+    img{
+        height: 65vh;
+    }
+}
+
+.content4 .container3{
+    display: flex;
+    width: 90%;
+    height: 40vw;
+    align-items: center;
+    gap: 3vh;
+    img {
+        right: 10vh;
+        position: absolute;
+        border-radius: 5%;
+        width: 40%;
+    }
+    .textcontainer{
+        margin-left: 11.5vh;
+    }
+    h1{
+        font-family: 'metropolis';
+        font-size: 41px;
+        font-weight: 900;
+        margin: 0;
+        line-height: 47px;
+    }
+    p{
+        line-height: 30px;
+        letter-spacing: .2px;
+        font-weight: 600;
+        font-family: 'metropolis thin';
+        font-size: 15px;
+    }
+    button{
+        width: 15vw;
+        gap: 5vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'metropolis';
+        font-size: 1vw;
+        height: 50px;
+        background: linear-gradient(120deg, blue 30% , rgb(2, 2, 137));
+        color: white;
+    }
+    button  div{
+        width: 3vw;
+        height: 3vw;
+        border-radius: 20px;
+        display: flex;      
+        align-items: center;
+        justify-content: center;
+        background: white;
+        i{
+            color: black;
+            font-weight: 600;
+        }
+    }
+}
+
+.content5{
+    width: 100%;
+    height: 35cm;
+}
+
+.content5 .lingkaran{
+    position :absolute;
+    z-index: -1;
+    border-radius: 50%;
+}
+
+.content5 .l1{
+    /* background: linear-gradient(90deg, rgb(1, 6, 28) 0%, rgba(0, 212, 255, 1) 100%); */
+    width: 50%;
+    top: 100;
+    right: 0;
+    img{
+        rotate: 320deg;
+        width: 80%;
+    }
+}
+.content5 .l2{
+    /* background: linear-gradient(90deg, rgb(1, 6, 28) 0%, rgba(0, 212, 255, 1) 100%); */
+    width: 60%;
+    height: 110%;
+    translate: -25vh -50vh;
+    img{
+        width: 100%;
+        transform: scale(-1,1);
+    }
+}
+.content5 .l3{
+    /* background: linear-gradient(90deg, rgb(1, 6, 28) 0%, rgba(0, 212, 255, 1) 100%); */
+    width: 100%;
+    height: 160%;
+    translate: -5vh 110vh;
+    img{
+        width: 100%;
+        transform: rotate(132deg);
+    }
+}
+.content5 .man{
+    position: absolute;
+    width: 50%;
+    translate: -15vh 90vh;
+    z-index: -1;
+}
+
+.content5 .topcontainer{
+    display: flex;
+    width: 100%;   
+    height: 75vh;
+}
+
+.content5 .topcontainer img{
+    width: 27%;
+    height: 80%;
+    translate: -1vh 7vh;
+    background: linear-gradient(to bottom, transparent);
+}
+
+.content5 .topcontainer .textcontainer{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    width: 55%;
+    margin: 7vh 50px 50px 5vh;
+    padding: 20px;
+    color: white;
+    backdrop-filter: blur(10px);
+    border: 1px solid white;
+    border-radius: 2vh;
+    h1{
+        font-family: 'metropolis';
+        font-size: 60px;
+        font-weight: 900;
+        align-self: center;
+        margin: 0 0 0 5vh;
+        line-height: 65px;
+    }
+    p{
+        line-height: 30px;
+        letter-spacing: .2px;
+        font-weight: 600;
+        font-family: 'metropolis thin';
+        font-size: 15px;
+        align-self: center;
+        margin: 0vh 0 6vh 10vh;
+    }
+    button{
+        width: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'metropolis';
+        font-size: 11px;
+        height: 50px;
+        background: white;
+        align-self: center;
+        margin-right: 55vh;
+        color: black;
+    }
+    button  div{
+        width: 35px;
+        height: 35px;
+        border-radius: 20px;
+        display: flex;      
+        align-items: center;
+        justify-content: center;
+        translate: 3vh ;
+        background: linear-gradient(120deg, blue 30% , rgb(2, 2, 137));
+        i{
+            color: white;
+            font-weight: 600;
+        }
+    }
+}
+
+.content5  .bottomcontainer{
+    color: white;
+    width: 100%;
+    height: 110vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0vh 0 0 15vh;
+    h1{
+        font-family: 'metropolis';
+        font-size: 50px;
+        font-weight: 900;
+        align-self: center;
+        word-spacing: 4px;
+        margin: 0;
+    }
+}
+
+.content5 .bottomcontainer .accessibility{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10vh;
+    margin-top: 30px;
+}
+
+.content5 .bottomcontainer .accessibility .acclist{
+    display: flex;
+    width: 170px;
+    height: 50px;
+    background-color: rgba(12, 1, 1, 0.371);
+    border: 1px solid black;
+    translate: 20vw 5vh;
+    border-radius: 40px;
+}
+
+.content5 .bottomcontainer .commentscontainer{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: 10vh;
+    margin-top: 30px;
+}
+
+.content5 .bottomcontainer .commentscontainer .comments{
+    display: flex;
+    width: 50vw;
+    height: 200px;
+    background-color: rgba(12, 1, 1, 0.371);
+    border: 1px solid black;
+    translate: 20vw 15vh;
+    border-radius: 15px;
+}
+
+.move {
+    color: white;
+    display: flex;
+    gap: 10px;
+    translate: 100vh 20vh;
+    .m{
+        width: 50px;
+        height: 50px;
+        border-radius: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(12, 1, 1, 0.371);
+    }
+    .r{
+        transform: scale(-1,1);
+    }
+}
+
+.bottomcontainer .accessibility .acclist{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    gap: 10px;
+    img{
+        width: 15vh;
+    }
+    h2{
+        font-family: 'metropolis thin';
+        font-size: 15.5px;
+        margin: 0;
+    }
+}
+
+.bottomcontainer .commentscontainer .comments{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.bottomcontainer .commentscontainer .comments .container{
+    margin-top: 20px;
+    margin-left: 10px;
+    width: 45vh;
+    display: flex;
+}
+
+.bottomcontainer .commentscontainer .comments .profile{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'metropolis';
+    font-size: 16px;
+    width: 70px;
+    height: 40px;
+    background: linear-gradient(90deg, rgb(2, 2, 137) 50%,rgb(3, 3, 64));
+    border-radius: 50%;
+    translate: 0 -10px;
+}
+
+.bottomcontainer .commentscontainer .comments .namehold{
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-flow:  wrap row;
+    gap: 10px;
+    margin-left: 4vh;
+    
+    h2{
+        font-family: 'metropolis';
+        font-size: 16px;
+        margin: 0;
+    }
+    .star{
+        margin-left: 6vh;
+        color: orange;
+        font-size: 10px;
+    }
+}
+
+.bottomcontainer .commentscontainer .comments .texthold{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'metropolis reg';
+    font-size: 12px;
+    /* margin-left: 5vh; */
+    line-height: 15px;
+}
+
+.content6{
+    background: linear-gradient(to top ,white, #f2f7ff 50%);
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center; 
+    /* height: 240vh; */
+}
+
+.content6 .container1{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 10px 10px 10px;
+    margin: 15px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    width: 96%;
+    height: 85vh;
+    background: linear-gradient(to top, #f2f7ff, white);
+    align-items: center;
+    gap: 8vh;
+    img{
+        width: 4.5%;
+        margin-top: 10vh;
+    }
+    h1{
+        text-align: center;
+        font-family: 'metropolis';
+        font-size: 44px;
+        line-height: 60px;
+    }
+    p{
+        text-align: center;
+        font-family: 'metropolis reg';
+        font-size: 16px;
+        margin: 0;
+        line-height: 30px;
+    }
+    .textcontainer{
+        gap: 0vh !important;
+    }
+    button{
+        width: 45vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'metropolis';
+        font-size: 13px;
+        height: 50px;
+        background: linear-gradient(120deg, blue 30% , rgb(2, 2, 137));
+        color: white;
+        align-self: center;
+    }
+    button  div{
+        width: 35px;
+        height: 35px;
+        border-radius: 20px;
+        display: flex;      
+        align-items: center;
+        justify-content: center;
+        translate: 3vh ;
+        background: white;
+        i{
+            color: black;
+            font-weight: 600;
+        }
+    }
+}
+
+.content6 .container2 {
+    background: rgba(0, 19, 39, 0.958);
+    color: white;
+    margin: 10px;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    gap: 3vh;
+    .bg{
+        position: absolute;
+        transform: scale(1,1) translate(20vh,-15vh);
+    }
+    .container{
+        display: flex;
+        gap: 80px;
+        .imgcontain{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 4vh;
+            width: 70vh;
+            height: 70vh; 
+            border-radius: 30px;
+            /* background:  linear-gradient(50% transparent,black); */
+            backdrop-filter: blur(5px);    
+            border: .2px solid white; 
+            .bgshadow{
+                width: 300px;
+                height: 200px;
+                position: absolute;
+                translate: 0vh -15vh;
+                z-index: -99;
+                filter: blur(40px);
+            }
+            img{
+                width: 90%;
+                border-radius: 30px;
+                align-self: center;
+            }
+            h1{
+                font-family: 'metropolis';
+                font-size: 4vw;
+                margin: 0;
+                line-height: 60px;
+                margin-left: 5vh;
+            }
+        }
+        .textcontain{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            width: 90vh; 
+            border-radius: 30px;
+            width: max-content;
+            p{
+                font-family: 'metropolis reg';
+                font-size: 1vw;
+                line-height: 20px;
+            }
+        }
+    }
+    
+    button{
+        width: 45vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'metropolis';
+        font-size: 13px;
+        height: 50px;
+        /* color: white; */
+        background: white;
+        align-self: center;
+        border: none;
+    }
+    button  div{
+        width: 35px;
+        height: 35px;
+        border-radius: 20px;
+        display: flex;      
+        align-items: center;
+        justify-content: center;
+        translate: 3vh ;
+        background: linear-gradient(120deg, blue 30% , rgb(2, 2, 137));
+        i{
+            color: white;
+            font-weight: 600;
+        }
+    }
+}
+
+.content6 .container3{
+    background: rgba(0, 19, 39, 0.958);
+    color: white;
+    margin: 10px;
+    width: 90%;
+    height: 290px;
+    border-radius: 50px;
+    background-image: url(asset/konten6/bg.avif);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    box-sizing: border-box;
+    overflow: hidden;
+    .container{
+        display: flex;
+        align-items: center;
+    }
+    .textcontainer{
+        margin: 50px;
+        display: flex;
+        flex-direction: column;
+        width: max-content;
+        margin-left: 20vh;
+        gap: 50px;
+        h1{
+            font-family: 'metropolis';
+            font-size: 45px;
+            margin: 0;
+            line-height: 60px;
+        }
+    }
+    img{
+        width: 26%;
+        margin-left: 12vw;
+        margin-top: .5vh;
+        translate: 0vh -2vh;
+    }
+    
+    button{
+        width: 12vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'metropolis';
+        font-size: 13px;
+        height: 50px;
+        align-self: center;
+        margin-right: 53vh;
+        background: white;
+    }
+    button  div{
+        width: 35px;
+        height: 35px;
+        border-radius: 20px;
+        display: flex;      
+        align-items: center;
+        justify-content: center;
+        translate: 3vh ;
+        background: linear-gradient(120deg, blue 30% , rgb(2, 2, 137));
+        i{
+            color: white;
+            font-weight: 600;
+        }
+    }
+}
+
+.helper1::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 20vh;
+    box-shadow: 2px 3vh 20px 0px violet, 2px 7vh 0px 0px darkviolet;
+    background: linea;
+    translate: 0vh -12vh;
+    z-index: -1;
+    border-bottom-right-radius: 35%;
+}
+
+.helper2::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 20vh;
+    background: white;
+    border-bottom-right-radius: 30%;
+    translate: 0.2vh -10vh;
+    rotate: 2deg;
+    z-index: -2;
+}
+.helper2::before{
+    content: '';
+    position: absolute;
+    width: 110%;
+    height: 20vh;
+    background: rgb(1, 13, 26);
+    border-top-left-radius: 20%;
+    translate: -1vh 7.9vh;
+    rotate: 2deg;
+    z-index: -1;
+}
+
+footer{
+    width: 100%;
+    height: 270vh;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+footer .container1{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .search{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width:80vw;
+        height: 50px;
+        background: black;
+        gap: 30px;
+        padding: 2px;
+        img{
+            width: 5vw;
+        }
+        .search2{
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            background-color: white;
+            width: 70vh;
+            border: 2px solid blue;
+            padding: 2px;
+            gap: 20vh;
+            border-radius: 10px;
+            button{
+                border-radius: 10px;
+                height: 30px;
+                width: 20vh;
+                font-family: 'metropolis reg';
+                font-weight: 700;
+                font-size: 12px;
+                background-color: blue;
+                color: white;
+            }
+            input{
+                border: none;
+                height: 5vh;
+                width: 50vh;
+                font-size: 12px;
+                margin-left: 10px;
+            }
+        }
+        p{
+            color: white;
+            font-family: 'metropolis';
+            font-size: 17px;
+            margin: 0;
+            line-height: 60px;
+        }
+    }
+}
+
+footer .container1 .inner1{
+    display: flex;
+    gap: 5vh;
+    margin-top: 15vh;
+    .i1{
+        display: flex;
+        flex-direction: column;
+        gap: 10vh;
+        h4{
+            margin: 0;
+            font-family: 'metropolis';
+            margin-bottom: 5vh;
+        }
+        .val{
+            display: flex;
+            flex-direction: column;
+            gap: 3vh;
+            font-size: 17px;
+            label{
+                font-family: 'metropolis thin';
+                font-size: 13px;
+            }
+            p{
+                font-family: 'metropolis thin';
+                font-size: 15px;
+                line-height: 3vh;
+                word-spacing: .5vh;
+            }
+        }
+        .icon{
+            display: flex;
+            gap: 3vh;
+            label{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 25px;
+                height: 25px;
+                border-radius: 50%;
+                border: 2px solid white;
+                font-size: 14px;
+    
+            }
+        } 
+    }
+    .i2{
+        display: flex;
+        flex-direction: column;
+        gap: 10vh;
+        h4{
+            margin: 0;
+            font-family: 'metropolis';
+            margin-bottom: 5vh;
+        }
+        .val{
+            display: flex;
+            flex-direction: column;
+            gap: 2.5vh;
+            label{
+                font-family: 'metropolis thin';
+                font-size: 13px;
+            }
+        }
+    }
+    .i3{
+        display: flex;
+        flex-direction: column;
+        gap: 10vh;
+        h4{
+            margin: 0;
+            font-family: 'metropolis';
+            margin-bottom: 5vh;
+        }
+        .val{
+            display: flex;
+            flex-direction: column;
+            gap: 2.5vh;
+            label{
+                font-family: 'metropolis thin';
+                font-size: 13px;
+            }
+        }
+        .imgocntainer{
+            display: flex;
+            flex-direction: column;
+            gap: 6vh;
+            margin-top: 10vh;
+            img[src="asset/konten7/w3c.svg"]{
+                width: 12vh;
+            }
+            img[src="asset/konten7/iso.svg"]{
+                width: 20vh;
+            }
+        }
+    }
+    .i4{
+        display: flex;
+        flex-direction: column;
+        gap: 10vh;
+        h4{
+            margin: 0;
+            font-family: 'metropolis';
+            margin-bottom: 5vh;
+        }
+        .val{
+            display: flex;
+            flex-direction: column;
+            gap: 2.5vh;
+            label{
+                font-family: 'metropolis thin';
+                font-size: 13px;
+            }
+        }
+    }
+} 
+
+footer .container1 .inner2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10vh;
+    .imgocntainer,.val,.icon{
+        display: none;
+    }
+    p{
+        text-align: center;
+        font-family: 'metropolis reg';
+        font-size: 12px;
+        color: #7f7a7afd;
+        line-height: 25px;
+    }
+    .bottom{
+        margin-top: 30px;
+        a{
+            text-decoration: none;
+            color: #7f7a7afd;
+            font-family: 'metropolis reg';
+            font-size: 18px;
+        }
+    }
+}
