@@ -931,6 +931,9 @@
 }
 @media screen and (max-width: 696px) {
     .med_cek:after {content:"@media screen and (max-width: 696px)";}
+    html{
+        overflow-x: hidden;
+    }
     #navigasi{
         font-size: 12px;
         gap: 0;
