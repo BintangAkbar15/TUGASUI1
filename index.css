@@ -20,7 +20,8 @@ html{
 
 body{
     touch-action: pan-y;
-
+    overflow-x: hidden;
+    position: relative;
 }
 
 a{
@@ -211,7 +212,7 @@ button{
 }
 
 .content1 .shadow{
-    height: 50%;
+    height: 10vw;
     width: 25%;
     translate: 130vh 9vh;
     border-radius: 20rem;
